@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>优惠活动</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    window.clientWidth = docEl.clientWidth;
+                    if (!window.clientWidth) return;
+                    docEl.style.fontSize = 40 * (window.clientWidth / 720) + 'px';
+                    window.base = 40 * (window.clientWidth / 720);
+                };
+
+        try {
+            recalc();
+        } catch (e) {
+
+        }
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+    </script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div id="container">
+        <div class="page" id="page-activities">
+            <nav>
+                <a href="index.html"><span class="toleft"></span></a>
+                <span class="title">优惠活动</span >
+            </nav>
+            <ul class="news">
+                <div class="iscroll">
+                    <li class="new">
+                        <time>星期五 下午5：00</time>
+                        <div class="bg">
+                            <img src="img/new.jpeg" alt="">
+                        </div>
+                        <h3 class="newTitle">加油卡充值享受9者优惠</h3>
+                        <p class="limitTime">有效期至2016-12-12</p>
+                        <p class="content">微信支付宝给加油卡充值享受9折优惠。</p>
+                        <p class="address">浙江石油所有充值网点</p>
+                    </li>
+                    <li class="new">
+                        <time>星期五 下午5：00</time>
+                        <div class="bg">
+                            <img src="img/new.jpeg" alt="">
+                        </div>
+                        <h3 class="newTitle">加油卡充值享受9者优惠</h3>
+                        <p class="limitTime">有效期至2016-12-12</p>
+                        <p class="content">微信支付宝给加油卡充值享受9折优惠。</p>
+                        <p class="address">浙江石油所有充值网点</p>
+                    </li>
+                    <li class="new">
+                        <time>星期五 下午5：00</time>
+                        <div class="bg">
+                            <img src="img/new.jpeg" alt="">
+                        </div>
+                        <h3 class="newTitle">加油卡充值享受9者优惠</h3>
+                        <p class="limitTime">有效期至2016-12-12</p>
+                        <p class="content">微信支付宝给加油卡充值享受9折优惠。</p>
+                        <p class="address">浙江石油所有充值网点</p>
+                    </li>
+                </div>
+
+            </ul>
+
+        </div>
+    </div>
+
+
+</body>
+<script src="js/zepto.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script src="js/iscroll.js" charset="utf-8"></script>
+<script type="text/javascript">
+    function initScroll( sClass ){
+        myScroll = new IScroll(sClass,{
+            vScroll: true,
+            bounce: true,
+            checkDOMChanges: true,
+            resizeScrollbars: true,
+            click: true
+        });
+    }
+    initScroll('.news');
+</script>
+</html>

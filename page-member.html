@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>个人中心</title>
+    <title>我的会员码</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -31,79 +31,45 @@
     })(document, window);
     </script>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/main.css?v=212">
+    <link rel="stylesheet" href="css/main.css"?v=11>
 </head>
 <body>
     <div id="container">
-        <div class="page" id="page1">
+        <div class="page" id="page-member">
             <nav>
                 <a href="index.html"><span class="toleft"></span></a>
-                <span class="title">个人中心</span >
-                <!-- <span class="quite"></span> -->
+                <span class="title">我的会员码</span >
             </nav>
-            <div class="page1-wrapper">
+            <div class="page-member-wrapper">
                 <div class="iscroll">
-                    <header>
-                        <div class="head">
-                            <img src="img/page1/head.jpg" alt="">
+                    <header><img src="img/TOPBG.png" alt="" /></header>
+                    <main>
+                        <p class="assist">辅助码：12312566493</p>
+                        <div class="shadow shadow-top">
+                            <img src="img/shadow.png" alt="" />
                         </div>
-                        <div class="head2">
-                            <p class="name">韩艳智</p>
-                            <p class="phone">18500362570</p>
+                        <div class="ercode-bg"><img src="img/ercode.png" alt=""></div>
+                        <p class="des">请向收银员出示此会员码<br>有机会赠送电子券</p>
+                        <div class="shadow shadow-bottom">
+                            <img src="img/shadow.png" alt="" />
                         </div>
-                    </header>
-                    <div class="items">
-                        <section class="item item1">
-                            <p class="num">0<sub>张</sub></p>
-                            <p class="desc">优惠券数量</p>
-                        </section>
-                        <section class="item item2">
-                            <p class="num">0.00<sub>元</sub></p>
-                            <p class="desc">累计数量</p>
-                        </section>
-                        <section class="item item3">
-                            <p class="num">0<sub>张</sub></p>
-                            <p class="desc">已绑定油卡</p>
-                        </section>
-                    </div>
-                    <div class="content">
-                        <section class="item discount" data-page="discount">
-                            <div class="icon"></div>
-                            <p class="text">管理我的优惠券</p>
-                            <div class="conner">
-                                <span>3</span>
-                            </div>
-                        </section>
-                        <section class="item record" data-page="record">
-                            <div class="icon"></div>
-                            <p class="text">交易记录查询</p>
-                            <div class="conner">
-                                <span>15</span>
-                            </div>
-                        </section>
-                        <section class="item card" data-page="oilcard">
-                            <div class="icon"></div>
-                            <p class="text">我的加油卡</p>
-                        </section>
-                        <section class="item install" data-page="install">
-                            <div class="icon"></div>
-                            <p class="text">个人设置</p>
-                        </section>
-                    </div>
+                    </main>
                 </div>
             </div>
+
             <footer>
                 <a href="#" class="bottom-phone">
                     <img src="img/page1/PHONE2.png" alt="" />
                 </a>
                 <ul>
                     <li class="bottom bottom-member">
-                        <a href="page-member.html">
+                        <a href="javascript:;">
                             <img src="img/page1/botoom1.png" alt="" />
                             <span>我的会员码</span>
                         </a>
                     </li>
                     <li class="bottom bottom-nearby">
+                        <!-- 后台接口 -->
                         <a href="#">
                             <img src="img/page1/botoom2.png" alt="" />
                             <span>附近油站</span>
@@ -116,31 +82,33 @@
                         </a>
                     </li>
                     <li class="bottom bottom-mycenter">
-                        <a href="javascript:;">
+                        <a href="index.html">
                             <img src="img/page1/botoom4.png" alt="" />
                             <span>个人中心</span>
                         </a>
                     </li>
                 </ul>
             </footer>
+
         </div>
+
     </div>
+
 
 </body>
 <script src="js/zepto.min.js" charset="utf-8"></script>
-<script type="text/javascript" src="js/index.js?v=112"></script>
+<script type="text/javascript" src="js/index.js"></script>
 <script src="js/iscroll.js" charset="utf-8"></script>
-
 <script type="text/javascript">
-    function initScroll( sClass ){
-        myScroll = new IScroll(sClass,{
-            vScroll: true,
-            bounce: true,
-            checkDOMChanges: true,
-            resizeScrollbars: true,
-            click: true
-        });
-    }
-    initScroll('.page1-wrapper');
+function initScroll( sClass ){
+    myScroll = new IScroll(sClass,{
+        vScroll: true,
+        bounce: true,
+        checkDOMChanges: true,
+        resizeScrollbars: true,
+        click: true
+    });
+}
+initScroll('.page-member-wrapper');
 </script>
 </html>

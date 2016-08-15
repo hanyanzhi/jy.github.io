@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    window.clientWidth = docEl.clientWidth;
+                    if (!window.clientWidth) return;
+                    docEl.style.fontSize = 40 * (window.clientWidth / 720) + 'px';
+                    window.base = 40 * (window.clientWidth / 720);
+                };
+
+        try {
+            recalc();
+        } catch (e) {
+
+        }
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+    </script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div id="container">
+        <div class="page" id="page-record">
+            <nav>
+                <a href="index.html"><span class="toleft"></span></a>
+                <span class="title">电子券使用记录</span >
+            </nav>
+            <div class="btn-wrap">
+                <div class="btns">
+                    <a class="btn btn3 active" href="#">近一个月</a>
+                    <a class="btn btn3" href="#">近三个月</a>
+                    <a class="btn btn3" href="#">全部</a>
+                </div>
+            </div>
+            <div class="boxs">
+                <ul class="box record-container wrapper">
+                    <div class="iscroll">
+                        <li class="record">
+                            <time>2016-05-04 22:01:47</time>
+                            <div class="record-content">
+                                <h3>浙江中石油加油站<span>￥8.00</span></h3>
+                                <p>优惠券名称：充值10元</p>
+                                <p>网店地址：--</p>
+                            </div>
+                        </li>
+                        <li class="record">
+                            <time>2016-05-04 22:01:47</time>
+                            <div class="record-content">
+                                <h3>浙江中石油加油站<span>￥8.00</span></h3>
+                                <p>优惠券名称：充值10元</p>
+                                <p>网店地址：--</p>
+                            </div>
+                        </li>
+                        <li class="record">
+                            <time>2016-05-04 22:01:47</time>
+                            <div class="record-content">
+                                <h3>浙江中石油加油站<span>￥8.00</span></h3>
+                                <p>优惠券名称：充值10元</p>
+                                <p>网店地址：--</p>
+                            </div>
+                        </li>
+                        <li class="record">
+                            <time>2016-05-04 22:01:47</time>
+                            <div class="record-content">
+                                <h3>浙江中石油加油站<span>￥8.00</span></h3>
+                                <p>优惠券名称：充值10元</p>
+                                <p>网店地址：--</p>
+                            </div>
+                        </li>
+                    </div>
+                </ul>
+                <ul class="box record-container wrapper" style="display:none">
+                    <div class="iscroll">
+                        <li class="record">
+                            <time>2016-05-04 22:01:47</time>
+                            <div class="record-content">
+                                <h3>浙江中石油加油站<span>￥8.00</span></h3>
+                                <p>优惠券名称：充值10元</p>
+                                <p>网店地址：--</p>
+                            </div>
+                        </li>
+                    </div>
+                </ul>
+                <ul class="box record-container wrapper" style="display:none">
+                    <div class="iscroll">
+                        <li class="record">
+                            <time>2016-05-04 22:01:47</time>
+                            <div class="record-content">
+                                <h3>浙江中石油加油站<span>￥8.00</span></h3>
+                                <p>优惠券名称：充值10元</p>
+                                <p>网店地址：--</p>
+                            </div>
+                        </li>
+                        <li class="record">
+                            <time>2016-05-04 22:01:47</time>
+                            <div class="record-content">
+                                <h3>浙江中石油加油站<span>￥8.00</span></h3>
+                                <p>优惠券名称：充值10元</p>
+                                <p>网店地址：--</p>
+                            </div>
+                        </li>
+                        <li class="record">
+                            <time>2016-05-04 22:01:47</time>
+                            <div class="record-content">
+                                <h3>浙江中石油加油站<span>￥8.00</span></h3>
+                                <p>优惠券名称：充值10元</p>
+                                <p>网店地址：--</p>
+                            </div>
+                        </li>
+                        <li class="record">
+                            <time>2016-05-04 22:01:47</time>
+                            <div class="record-content">
+                                <h3>浙江中石油加油站<span>￥8.00</span></h3>
+                                <p>优惠券名称：充值10元</p>
+                                <p>网店地址：--</p>
+                            </div>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script src="js/zepto.min.js" charset="utf-8"></script>
+<script src"js/touch.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script src="js/iscroll.js" charset="utf-8"></script>
+
+<script type="text/javascript">
+function initScroll( sClass ){
+    myScroll = new IScroll(sClass,{
+        vScroll: true,
+        bounce: true,
+        checkDOMChanges: true,
+        resizeScrollbars: true,
+        click: true
+    });
+}
+initScroll('.wrapper');
+</script>
+</html>
