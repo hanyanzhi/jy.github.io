@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 .small-font{
     font-size: 12px;
     -webkit-transform-origin-x: 0;
@@ -795,3 +796,172 @@ form #msgSubmit, form #cardSubmit{
     font-size: 0.5rem;
     color: rgb(86,86,86);
 }
+=======
+#container {
+  position: absolute;
+  overflow: hidden; }
+  #container .iscroll {
+    width: 100%; }
+    #container .iscroll header {
+      width: 100%;
+      height: 9.75rem;
+      background: url("../img/bg_top.png") no-repeat center center;
+      background-size: 100% 100%;
+      position: relative; }
+      #container .iscroll header .title {
+        width: 12.425rem;
+        height: 3.55rem;
+        position: absolute;
+        top: 2rem;
+        left: 1.65rem; }
+        #container .iscroll header .title img {
+          width: 100%;
+          height: 100%; }
+      #container .iscroll header .bar {
+        width: 14rem;
+        height: 4rem;
+        background: url("../img/bar_bg.png") no-repeat center center;
+        background-size: 100% 100%;
+        position: absolute;
+        top: 5rem;
+        left: .95rem; }
+        #container .iscroll header .bar .title2 {
+          width: 8.8rem;
+          height: 1.05rem;
+          color: #eb0000;
+          position: absolute;
+          top: 1.25rem;
+          left: 2.2rem; }
+        #container .iscroll header .bar .time {
+          width: 100%;
+          height: 0.5rem;
+          font-size: 0.5rem;
+          line-height: 0.5rem;
+          text-align: center;
+          color: white;
+          position: absolute;
+          top: 2.9rem; }
+    #container .iscroll main .intro {
+      width: 6rem;
+      float: left;
+      padding-left: 0.2rem; }
+      #container .iscroll main .intro .brand {
+        padding: 0.1rem; }
+      #container .iscroll main .intro .name {
+        font-size: 0.6rem;
+        color: #444;
+        padding: 0.1rem 0;
+        font-weight: 500; }
+      #container .iscroll main .intro .name0 {
+        padding: 0; }
+      #container .iscroll main .intro .specs {
+        font-size: 0.5rem;
+        color: #707070;
+        padding-top: 0.1rem; }
+      #container .iscroll main .intro .cost {
+        font-size: 0.5rem;
+        color: #e37877;
+        padding: 0.1rem 0; }
+      #container .iscroll main .intro .desc {
+        font-size: 0.6rem;
+        color: #111;
+        padding-top: 0.4rem; }
+      #container .iscroll main .intro .desc0 {
+        padding-top: 0rem; }
+      #container .iscroll main .intro .sale {
+        font-size: .7rem;
+        color: white;
+        margin-top: 0.25rem; }
+      #container .iscroll main .intro .sale-m {
+        width: 3.04rem;
+        height: 1.225rem;
+        line-height: 1.225rem;
+        background: url("../img/bg_m.png") no-repeat center center;
+        background-size: 100% 100%;
+        text-indent: .3rem; }
+      #container .iscroll main .intro .sale-l {
+        width: 5.4rem;
+        height: 1.225rem;
+        line-height: 1.225rem;
+        background: url("../img/bg_l.png") no-repeat center center;
+        background-size: 100% 100%; }
+      #container .iscroll main .intro .sale-s {
+        width: 2.925rem;
+        height: 1.225rem;
+        line-height: 1.225rem;
+        background: url("../img/bg_s.png") no-repeat center center;
+        background-size: 100% 100%;
+        text-indent: .5rem; }
+      #container .iscroll main .intro .sale-b {
+        width: 6.875rem;
+        height: 1.8rem;
+        background: url("../img/bg_b.png") no-repeat center center;
+        background-size: 100% 100%;
+        padding: .1rem 0 0 .5rem; }
+    #container .iscroll main .p2-list {
+      overflow: hidden; }
+      #container .iscroll main .p2-list .p2 {
+        width: 7.4rem;
+        height: 6.8rem;
+        float: left;
+        border: 1px solid #c4c3c3;
+        margin: 0 0 0.5rem 0.4rem;
+        position: relative; }
+        #container .iscroll main .p2-list .p2 .sale {
+          position: absolute;
+          bottom: 0.3rem; }
+        #container .iscroll main .p2-list .p2 .desc {
+          position: absolute;
+          bottom: 1.7rem; }
+        #container .iscroll main .p2-list .p2 .cost {
+          position: absolute;
+          bottom: 2.35rem; }
+        #container .iscroll main .p2-list .p2 .specs {
+          position: absolute;
+          bottom: 3.05rem; }
+        #container .iscroll main .p2-list .p2 .name {
+          position: absolute;
+          bottom: 3.75rem; }
+        #container .iscroll main .p2-list .p2 .brand {
+          position: absolute;
+          top: 0.1rem; }
+        #container .iscroll main .p2-list .p2 .brand0 {
+          top: 0.5rem; }
+        #container .iscroll main .p2-list .p2 .product {
+          float: left;
+          width: 2.9rem;
+          height: 6.45rem;
+          text-align: center;
+          padding-top: .45rem;
+          position: absolute;
+          top: 0rem;
+          right: 0; }
+    #container .iscroll main .p1-list {
+      margin-top: 1rem; }
+      #container .iscroll main .p1-list .p1 {
+        width: 15.2rem;
+        padding: 0.2rem;
+        border: 1px solid #c4c3c3;
+        margin: 0 0 0.5rem 0.4rem;
+        overflow: hidden;
+        position: relative; }
+        #container .iscroll main .p1-list .p1 .p1-intro {
+          width: 7rem;
+          padding-left: 0.3rem; }
+        #container .iscroll main .p1-list .p1 .product {
+          float: left;
+          width: 7.45rem;
+          height: 5.8rem;
+          text-align: center;
+          padding-top: 0.15rem; }
+    #container .iscroll footer {
+      width: 100%;
+      margin-top: -24.8rem;
+      z-index: -1;
+      position: relative; }
+      #container .iscroll footer img {
+        width: 100%;
+        height: 30.5rem; }
+
+/*# sourceMappingURL=main.css.map */
+>>>>>>> Stashed changes
