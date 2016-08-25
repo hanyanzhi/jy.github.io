@@ -1,0 +1,209 @@
+#container{
+    position: absolute;
+    overflow: hidden;
+    .iscroll{
+        width: 100%;
+        header{
+            width: 100%;
+            height: 9.75rem;
+            background: url('../img/bg_top.png') no-repeat center center;
+            background-size: 100% 100%;
+            position: relative;
+            .title{
+                width: 12.425rem;
+                height: 3.55rem;
+                position: absolute;
+                top: 2rem;
+                left: 1.65rem;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .bar{
+                width: 14rem;
+                height: 4rem;
+                background: url('../img/bar_bg.png') no-repeat center center;
+                background-size: 100% 100%;
+                position: absolute;
+                top: 5rem;
+                left: .95rem;
+                .title2{
+                    width: 8.8rem;
+                	height: 1.05rem;
+                    color: #eb0000;
+                    position: absolute;
+                    top: 1.25rem;
+                    left: 2.2rem;
+                }
+                .time{
+                    width: 100%;
+                    height: 0.5rem;
+                    font-size: 0.5rem;
+                    line-height: 0.5rem;
+                    text-align: center;
+                    color: white;
+                    position: absolute;
+                    top: 2.9rem;
+                }
+            }
+        }
+        main{
+            .intro{
+                width: 6rem;
+                float: left;
+                padding-left: 0.2rem;
+                .brand{
+                    padding: 0.1rem;
+                }
+                .name{
+                    font-size: 0.6rem;
+                    color: #444;
+                    padding: 0.1rem 0;
+                    font-weight: 500;
+                }
+                .name0{
+                    padding: 0;
+                }
+                .specs{
+                    font-size: 0.5rem;
+                    color:#707070;
+                    padding-top: 0.1rem;
+                }
+                .cost{
+                    font-size: 0.5rem;
+                    color: #e37877;
+                    padding: 0.1rem 0;
+                }
+                .desc{
+                    font-size: 0.6rem;
+                    color: #111;
+                    padding-top: 0.4rem;
+                }
+                .desc0{
+                    padding-top: 0rem;
+                }
+                .sale{
+                    font-size: .7rem;
+                    color: white;
+                    margin-top: 0.25rem;
+
+                }
+                .sale-m{
+                    width: 3.04rem;
+                    height: 1.225rem;
+                    line-height: 1.225rem;
+                    background: url("../img/bg_m.png") no-repeat center center;
+                    background-size: 100% 100%;
+                    text-indent: .3rem;
+                }
+                .sale-l{
+                    width: 5.4rem;
+                    height: 1.225rem;
+                    line-height: 1.225rem;
+                    background: url("../img/bg_l.png") no-repeat center center;
+                    background-size: 100% 100%;
+                }
+                .sale-s{
+                    width: 2.925rem;
+                    height: 1.225rem;
+                    line-height: 1.225rem;
+                    background: url('../img/bg_s.png') no-repeat center center;
+                    background-size: 100% 100%;
+                    text-indent: .5rem;
+                }
+                .sale-b{
+                    width: 6.875rem;
+                    height: 1.8rem;
+                    background: url('../img/bg_b.png') no-repeat center center;
+                    background-size: 100% 100%;
+                    padding: .1rem 0 0 .5rem;
+                }
+            }
+            .p2-list{
+                overflow: hidden;
+                .p2{
+                    width: 7.4rem;
+                    height: 6.8rem;
+                    float: left;
+                    border: 1px solid #c4c3c3;
+                    margin: 0 0 0.5rem 0.4rem;
+                    position: relative;
+                    .sale{
+                        position: absolute;
+                        bottom: 0.3rem;
+                    }
+                    .desc{
+                        position: absolute;
+                        bottom: 1.7rem;
+                    }
+                    .cost{
+                        position: absolute;
+                        bottom: 2.35rem;
+                    }
+                    .specs{
+                        position: absolute;
+                        bottom: 3.05rem;
+                    }
+                    .name{
+                        position: absolute;
+                        bottom: 3.75rem;
+                    }
+                    .brand{
+                        position: absolute;
+                        top: 0.1rem;
+                    }
+                    .brand0{
+                        top: 0.5rem;
+                    }
+                    .product{
+                        float: left;
+                        width: 2.9rem;
+                        height: 6.45rem;
+                        text-align: center;
+                        padding-top: .45rem;
+                        position: absolute;
+                        top: 0rem;
+                        right: 0;
+                    }
+
+                }
+            }
+            .p1-list{
+                margin-top: 1rem;
+                .p1{
+                    width: 15.2rem;
+                    padding: 0.2rem;
+                    border: 1px solid #c4c3c3;
+                    margin: 0 0 0.5rem 0.4rem;
+                    overflow: hidden;
+                    position: relative;
+                    .p1-intro{
+                        width: 7rem;
+                        padding-left: 0.3rem;
+                    }
+                    .product{
+                        float: left;
+                        width: 7.45rem;
+                        height: 5.8rem;
+                        text-align: center;
+                        padding-top: 0.15rem;
+                    }
+
+                }
+
+            }
+
+        }
+        footer{
+            width: 100%;
+            margin-top: -24.8rem;
+            z-index: -1;
+            position: relative;
+            img{
+                width: 100%;
+                height: 30.5rem;
+            }
+        }
+    }
+}

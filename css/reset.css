@@ -20,10 +20,7 @@ html,body{
     overflow: hidden;
     user-select: none;
     -webkit-user-select:none;
-<<<<<<< Updated upstream
-=======
     /*font-family: 'MicrosoftYaHei', '微软雅黑', 'STHeitiSC';*/
->>>>>>> Stashed changes
     font-family: '微软雅黑';
 }
 .fl {
@@ -47,11 +44,7 @@ ul,ol,li{
 }
 a{
     text-decoration: none;
-<<<<<<< Updated upstream
-    color: #333;
-=======
     color: #fff;
->>>>>>> Stashed changes
 }
 img{
     border: none;
@@ -63,20 +56,12 @@ input,select{
     background: none;
 }
 #container{
-<<<<<<< Updated upstream
-    width: 18rem;
-=======
     width: 16rem;
->>>>>>> Stashed changes
     height: 100%;
     margin: 0 auto;
 }
 .page ,.layer{
-<<<<<<< Updated upstream
-    width: 18rem;
-=======
     width: 16rem;
->>>>>>> Stashed changes
     height: 100%;
     overflow-x: hidden;
 }
