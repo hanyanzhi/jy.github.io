@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>JSON.parse()</title>
+<script type="text/javascript" src="json2.js"></script>
+<script type="text/javascript">
+    var data='{'
+    +'"root":'
+    +'['
+    +'{"name":"1","value":"0"},'
+    +'{"name":"6101","value":"西安市"},'
+    +'{"name":"6102","value":"铜川市"},'
+    +'{"name":"6103","value":"宝鸡市"},'
+    +'{"name":"6104","value":"咸阳市"},'
+    +'{"name":"6105","value":"渭南市"},'
+    +'{"name":"6106","value":"延安市"},'
+    +'{"name":"6107","value":"汉中市"},'
+    +'{"name":"6108","value":"榆林市"},'
+    +'{"name":"6109","value":"安康市"},'
+    +'{"name":"6110","value":"商洛市"}'
+    +']'
+    +'}';
+
+
+
+    //示例1：此示例使用 JSON.parse 将 JSON 字符串转换为对象
+    var jsontext = '{"firstname":"Jesper","surname":"Aaberg","phone":["555-0100","555-0120"]}';
+    var contact = JSON.parse(jsontext);
+    console.log(data);
+    console.log(111);
+    document.write(contact.surname + ", " + contact.firstname + ", "+ contact.phone);
+
+
+
+    //dateReviver
+    //var dateObj = new Date(Date.UTC('2008', +'01' - 1, +'01', +'12', +'00', +'00'))
+    //alert(dateObj.toUTCString())
+
+    //示例2：此示例使用 JSON.parse 反序列化 ISO 格式的日期字符串, 将返回Date格式对象。
+    var jsontext2 = '{ "hiredate": "2008-01-01T12:00:00Z", "birthdate": "2008-12-25T12:00:00Z" }';
+    var dates = JSON.parse(jsontext2, dateReviver);
+    document.write("<br /><br />"+dates.birthdate.toUTCString());
+    function dateReviver(key, value) {
+        var a;
+        if (typeof value === 'string') {
+            a = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2}(?:\.\d*)?)Z$/.exec(value);
+            if (a) {
+                return new Date(Date.UTC(+a[1], +a[2] - 1, +a[3], +a[4],
+                                +a[5], +a[6]));
+            }
+        }
+        return value;
+    };
+
+</script>
+</head>
+<body>
+</body>
+</html>

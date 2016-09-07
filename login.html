@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>商城登录</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+			resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			recalc = function () {
+				window.clientWidth = docEl.clientWidth;
+				if (!window.clientWidth) return;
+				docEl.style.fontSize = 20 * (window.clientWidth / 320) + 'px';
+				window.base = 20 * (window.clientWidth / 320);
+			};
+        try {
+            recalc();
+        } catch (e) {
+            console.log(e);
+        }
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+    </script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo"></div>
+        <div class="location"><span class="location-icon"></span><span class="location-city">北京</span></div>
+        <p><a href="#">登录</a> | <a href="register.html">注册</a></p>
+    </header>
+    <div class="title">
+        <div class="new-header">
+            <a href="#" class="back"><</a>
+            <h1 class="user-login">用户登录</h1>
+            <a href="#" class="nav-menu">#</a>
+        </div>
+        <div class="new-nav-tab" style="display:none;">
+            <div class="tab-list">
+                <a href="#"><span class="nav-tab-icon"></span><p class="nav-tab-p">首页</p></a>
+                <a href="#"><span class="nav-tab-icon"></span><p class="nav-tab-p">分类搜索</p></a>
+                <a href="#"><span class="nav-tab-icon"></span><p class="nav-tab-p">购物车</p></a>
+                <a href="#"><span class="nav-tab-icon"></span><p class="nav-tab-p">会员中心</p></a>
+            </div>
+        </div>
+    </div>
+    <div class="pagemain">
+        <section class="login-content">
+            <div class="login-tab">
+                <span id="vip-login" class="active" data-login="vip">普通会员登录</span>
+                <span id="phone-login" data-login="phone">手机动态码登录</span>
+            </div>
+            <form action="#" method="post">
+                <ul id="form-vip">
+                    <li><input type="text" name="user-name" id="user-name" placeholder="用户名 / 手机 / 邮箱"/></li>
+                    <li><input type="password" name="pwd" id="pwd" placeholder="输入密码"/></li>
+                    <li class="ser-login">
+                        <input type="checkbox" id="save-name" checked="true"/>
+                        <label for="save-name">7天内自动登录</label>
+                        <a href="#" target="_blank">忘记密码？</a>
+                    </li>
+                    <li>
+                        <input class="login-btn" type="submit" value="登录" />
+                    </li>
+                    <li>
+                        <a href="register.html" class="register">没有账号？立即注册</a>
+                    </li>
+                </ul>
+            </form>
+            <form action="#" method="post">
+                <ul id="form-phone" style="display:none;">
+                    <li>
+                        <input type="number" name="phone-number" id="phone-number" placeholder="请输入您的手机号" />
+                    </li>
+                    <li>
+                        <input type="number" name="try-number" id="try-number" placeholder="请输入短信验证码" /><input type="button" id="get-try-number" value="获取短信验证码" />
+                    </li>
+                    <li>
+                        <input class="login-btn" type="submit" value="登录">
+                    </li>
+                </ul>
+            </form>
+            <p>温馨提示：成功注册会员，登录后首次完善个人信息，即可获赠官网会员20积分</p>
+        </section>
+    </div>
+    <footer>
+        <div class="f-section"><a href="#">联系我们</a>&nbsp;&nbsp;&nbsp;<a href="#">企业服务</a></div>
+        <div class="f-section">
+            <p>Copyright © 2016--  北京红拾科技油站便利店 版权所有</p>
+        </div>
+    </footer>
+</body>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
+<script type="text/javascript">
+    $(function(){
+        $('.nav-menu').on('click',function(){
+            $('.new-nav-tab').toggle();
+        });
+        $('.login-tab span').on('click',function(){
+            $(this).attr('class','active').siblings().attr('class','');
+            if($(this).data('login') == 'vip'){
+                $('#form-phone').css('display','none');
+                $('#form-vip').css('display','block');
+            }else{
+                $('#form-vip').css('display','none');
+                $('#form-phone').css('display','block');
+            }
+        });
+    });
+</script>
+</html>

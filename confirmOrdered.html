@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>确认订单</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+			resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			recalc = function () {
+				window.clientWidth = docEl.clientWidth;
+				if (!window.clientWidth) return;
+				docEl.style.fontSize = 20 * (window.clientWidth / 320) + 'px';
+				window.base = 20 * (window.clientWidth / 320);
+			};
+        try {
+            recalc();
+        } catch (e) {
+            console.log(e);
+        }
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+    </script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo"></div>
+        <div class="location"><span class="location-icon"></span><span class="location-city">北京</span></div>
+        <p><a href="#">登录</a> | <a href="register.html">注册</a></p>
+    </header>
+    <div class="title">
+        <div class="new-header">
+            <a href="#" class="back"><</a>
+            <h1 class="user-login">确认订单</h1>
+            <a href="#" class="nav-menu">#</a>
+        </div>
+        <div class="new-nav-tab" style="display:none;">
+            <div class="tab-list">
+                <a href="#"><span class="nav-tab-icon"></span><p class="nav-tab-p">首页</p></a>
+                <a href="#"><span class="nav-tab-icon"></span><p class="nav-tab-p">分类搜索</p></a>
+                <a href="#"><span class="nav-tab-icon"></span><p class="nav-tab-p">购物车</p></a>
+                <a href="#"><span class="nav-tab-icon"></span><p class="nav-tab-p">会员中心</p></a>
+            </div>
+        </div>
+    </div>
+    <div class="ordered-mesg">
+        <div class="order-title">
+	        <div class="customer-mesg">
+				<div class="base-mesg">
+					<div><span class="n-icon">*收货人：</span><span class="c-name">韩梅梅</span></div>
+					<div> <span class="p-icon">*联系电话：</span><span class="c-phone">136000000</span></div>
+					<span class="editor">修改</span>
+				</div>
+	        </div>
+	        <div class="customer-address">
+				<p>*地址：北京市 昌平区 回龙观东大街199号昌平区回龙观地区办事处腾讯重创空间A216</p>
+	        </div>
+        </div>
+        <div class="order-goods">
+			<div class="order-list">
+				<div class="ordered-item">
+					<img src="img/newico2.png" alt="ordered">
+					<p>x<span order-number>1</span> </p>
+				</div>
+				<div class="ordered-item">
+					<img src="img/newico2.png" alt="ordered">
+					<p>x<span order-number>1</span> </p>
+				</div>
+				<div class="ordered-item">
+					<img src="img/newico2.png" alt="ordered">
+					<p>x<span order-number>1</span> </p>
+				</div>
+			</div>
+			<div class="order-total">
+				<p><span>...</span><span class="goods-number">共3件</span><a href="#">列表</a></p>
+			</div>
+			<span class="check">查看</span>
+        </div>
+        <div class="pay-way">
+			<div>选择支付方式</div>
+			<div class="pay-way-list">
+				<ul>
+					<li>微信</li>
+					<li>支付宝</li>
+					<li>QQ钱包</li>
+				</ul>
+			</div>
+        </div>
+        <div class="order-invoice">
+			<div>发票信息</div>
+			<div></div>
+        </div>
+        <div class="order-remark"></div>
+        <div class="cost-list"></div>
+        <div class="submit-ordered"></div>
+    </div>
+</body>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
+<script type="text/javascript">
+    $(function(){
+        $('.nav-menu').on('click',function(){
+            $('.new-nav-tab').toggle();
+        });
+    });
+</script>
+</html>

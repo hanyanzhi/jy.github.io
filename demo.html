@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <style type="text/css">
+    body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}html{font-size: 12px;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;}table{border-collapse:collapse;border-spacing:0;}q:before,q:after{content:'';}object,embed{vertical-align:top;}hr,legend{display:none;}img,abbr,acronym,fieldset{border:0;}ul li{list-style-type:none;}a,label{cursor:pointer;}img{vertical-align:bottom;margin:0;padding:0;}a{text-decoration:none;outline: none;}.clearfix:after{content: "."; visibility: hidden; display: block; height: 0.1px; font-size:0.1em; line-height: 0; clear: both;}.clearfix {*zoom:1;}input ,textarea,select{outline: none;border:1px solid #bfbfbf;}th{font-weight: 400;}
+    button{cursor: pointer;border:none;outline: none;}textarea{border: 1px solid #ccc;resize: none;outline: none;overflow: hidden;padding: 5px;}select{outline: none;}.text_overflow{overflow:hidden;white-space: nowrap;
+        text-overflow: ellipsis;}
+    html {
+        font-family: "Microsoft YaHei",tahoma,arial,"Hiragino Sans GB","\5b8b\4f53",sans-serif;
+        font-size:14px;
+        color: #5c5d5e;
+    }
+    /* 公共分页模块 */
+    .index-page {
+        float:right;
+        padding-top:10px;
+    }
+    .index-page .index-target {
+        width:25px;
+        height:14px;
+        line-height: 14px;
+        padding:3px 5px;
+        border-radius:2px;
+        vertical-align: middle;
+    }
+    .index-page .target {
+        margin-right:30px;
+        color:#808080;
+    }
+    .index-page .page-main {
+        float:right;
+        margin-top:-10px;
+    }
+    .index-page .page-main li {
+        display: none;
+        float:left;
+        width:37px;
+        height:37px;
+        border:1px solid #e6e6e6;
+        text-align:center;
+        line-height:37px;
+        margin-right: 5px;
+    }
+    .index-page .page-main .block {
+        display: block;
+    }
+    .index-page .page-main a {
+        display:block;
+        height:100%;
+        color:#c0c0c0;
+    }
+    .index-page .page-main a:hover ,
+    .index-page .page-main .active {
+        background-color:#f75000;
+        color:#fff;
+    }
+    .index-page .page-main .unable-page {
+        cursor: not-allowed;
+        background-color: #dedede;
+    }
+    .index-page .page-main .unable-page:hover {
+        background-color: #dedede;
+    }
+    .index-page .page-main .prev ,
+    .index-page .page-main .next {
+        display: block;
+        height: 9px;
+        padding: 13px 14px 15px 15px;
+    }
+    .index-page .page-main .prev-i ,
+    .index-page .page-main .next-i {
+        display:block;
+        width: 0;
+        height: 0;
+        border-top: 6px solid transparent;
+        border-right: 8px solid #c0c0c0;
+        border-bottom: 6px solid transparent;
+    }
+    .index-page .page-main .next-i {
+        border-top: 6px solid transparent;
+        border-right: none;
+        border-left: 8px solid #c0c0c0;
+        border-bottom: 6px solid transparent;
+    }
+    </style>
+</head>
+<body>
+    <div class="index-page" id="pageBox"></div>
+<script type="text/javascript" src="http://static.nysochina.com/static/js/lib/jquery-1.11.1.min.js?=new.date()"></script>
+<script type="text/javascript">
+(function ($) {
+    $.fn.pageing = function(options ,fn){
+        // 注入的html结构
+       var html = '总<span class="allNum"></span>条数据 <span class="now-page"></span>/<span class="allPage"></span>页 至 <input type="text"  class="index-target" /> 页 <a href="###" class="target" class="goPage">跳转</a><ul class="page-main" id="pageMain"><li class="block"><a href="###" class="prev unable-page"><i class="prev-i"></i></a></li><li class="block last"><a href="###" class="next"><i class="next-i"></i></a></li></ul>';
+
+        // 初始化
+        $(this).html('').append(html);
+        var oThis = $(this).find('ul'),//容器
+            nowPage = $('#pageBox .now-page') || options.nowPage,//目前多少页元素(显示)
+            indexTarget = $('#pageBox .index-target') || options.indexTarget,//目前多少页元素（输入框）
+            target =$('#pageBox .target') || options.target,//跳转元素
+            prev = options.prev || $('#pageBox .prev'),//上一页元素
+            next = options.next || $('#pageBox .next'),//下一页元素
+            last = next.parent(),
+            allNum = options.allNum,//总数据条数
+            pageNum =  options.pageNum,//总页数
+            index = options.index || 1;
+            eachPage = options.eachPage || 10,//每页显示多少条记录
+            max  =  options.max || 5,//最多显示多少页数
+            min = 0,
+            page = null,
+            fn = fn || function() {};
+        nowPage.text(index);
+        $('#pageBox .allNum').text(allNum);
+        $('#pageBox .allPage').text(pageNum);
+        if( pageNum === 1 ) {
+            next.addClass('unable-page');
+        }
+        $('#pageBox .page').remove();
+        for(var i = 1;i<= pageNum ; i++) {
+            var $li = $('<li class="page"></li>');
+            var $a = $("<a href='###'></a>");
+            if( i === index ) {
+                $a.addClass('active');
+            }
+            $a.text( i );
+            $li.append($a);
+            last.before($li);
+        }
+        page = $('.page');
+        page.hide();
+        show(index);
+        showPageindex(0,max, index-1);
+        // 点击事件
+        oThis.find('a').on('click' , function() {
+            oThis.find('li').each(function() {
+                if( $(this).children('a').hasClass('active') ) {
+                    index = $(this).index();
+                }
+            });
+            if( $(this).hasClass('unable-page') ) {
+                return;
+            } else if($(this).hasClass('prev') ) {
+                index --;
+            } else if( $(this).hasClass('next') ) {
+                index ++;
+            } else {
+                index = $(this).parent().index();
+            }
+            show(index);
+            showPageindex(min , max, index-1);
+            fn(index);
+        });
+
+        // 点击跳转按钮
+        target.click(function() {
+            index = indexTarget.val();
+            if( index !== '' ) {
+                index = parseInt(indexTarget.val()) ;
+                if( index < 1 ) {
+                    alert('输入页数不能小于1！');
+                    return false;
+                } else if (index > pageNum) {
+                    alert('输入页数不能大于总页数！');
+                    return false;
+                } else {
+                    showPageindex(min , max, index-1);
+                    show(index);
+                    fn(index);
+                }
+            } else {
+                alert('请输入页数');
+            }
+        });
+
+        // 限制只能输入数字
+        indexTarget.keyup(function() {
+            var value = $(this).val();
+            $(this).val(value.replace(/\D/g,""));
+        }).keydown(function() {
+            var value = $(this).val();
+            $(this).val(value.replace(/\D/g,""));
+        });
+
+        // 样式控制
+        function show(index){
+            oThis.find('a').removeClass('unable-page');
+            if(index === 1) {
+                prev.addClass('unable-page');
+            }
+            if(index === pageNum ) {
+                next.addClass('unable-page');
+            }
+            oThis.find('a').removeClass('active');
+            page.eq(index-1).children('a').addClass('active');
+            nowPage.text(index);
+        }
+        //控制哪些页码显示
+        function showPageindex(min , max , index){
+            if( index <= max/2) {
+                min = 0;
+                max = max;
+            } else if(pageNum - index <= Math.ceil(max/2) ){
+                min = pageNum - max;
+                max = pageNum;
+            } else {
+                min = Math.round(index - max/2);
+                max = Math.round(index + max/2);
+            }
+            page.hide();
+            for(var i = min; i< max ; i++) {
+                page.eq(i).show();
+            }
+        }
+    };
+})(jQuery);
+
+var options = {
+    index :1,//当前页
+    allNum: 1,//总共多少数据
+    eachPage : 3,//每页显示数据条数
+    pageNum : 10,//一共多少页数据
+    max : 5//最多显示多少页
+};
+$('#pageBox').pageing(options);
+</script>
+</body>
+</html>

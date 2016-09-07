@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>金秋送爽</title>
+    <title>微商城</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -15,8 +15,8 @@
                 recalc = function () {
                     window.clientWidth = docEl.clientWidth;
                     if (!window.clientWidth) return;
-                    docEl.style.fontSize = 40 * (window.clientWidth / 640) + 'px';
-                    window.base = 40 * (window.clientWidth / 640);
+                    docEl.style.fontSize = 20 * (window.clientWidth / 320) + 'px';
+                    window.base = 20 * (window.clientWidth / 320);
                 };
 
         try {
@@ -30,223 +30,181 @@
     })(document, window);
     </script>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/main.css?v=2">
+    <link rel="stylesheet" href="css/swiper3.07.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="dist/dropload.css">
 </head>
 <body>
-    <div id="container">
-        <div class="iscroll">
-            <header>
-                <div class="title">
-                    <img src="img/title.png" alt="" />
-                </div>
-                <div class="bar">
-                    <p class="time">活动时间&nbsp2016.09.01 —— 2016.10.31日</p>
-                     <img class="title2" src="img/title2.png" alt="">
-                </div>
-            </header>
-            <main>
-                <ul class="p2-list">
-                    <li class="p2">
-                        <div class="intro">
-                            <h3 class="brand brand0">
-                                <img src="img/11_n.png" style="      width: 2.575rem;height: 1.15rem;"alt="" />
-                            </h3>
-                            <p class="name name0">天然雪山矿泉水</p>
-                            <p class="specs">规格：510ml</p>
-                            <p class="cost">原价：5.5元/瓶</p>
-                            <p class="desc desc0">促销售价</p>
-                            <p class="sale sale-m">10元3瓶</p>
-                        </div>
-                        <div class="product">
-                            <img src="img/11_p.png" style="        width: 1.475rem; height: 5.625rem;" alt="" />
-                        </div>
-
-                    </li>
-                    <li class="p2">
-                        <div class="intro">
-                            <h3 class="brand brand0">
-                                <img src="img/12_n.png" style="width: 1.45rem; height: 1.2rem;" alt="" />
-                            </h3>
-                            <p class="name name0">景田饮用矿泉水</p>
-                            <p class="specs">规格：560ml</p>
-                            <p class="cost">原价：2元/瓶</p>
-                            <p class="desc desc0">促销售价</p>
-                            <p class="sale sale-m">5元3瓶</p>
-                        </div>
-                        <div class="product">
-                            <img src="img/12_p.png" style="width: 2.225rem; height: 5.3rem;" alt="" />
-                        </div>
-
-                    </li>
-                    <li class="p2">
-                        <div class="intro">
-                            <h3 class="brand">
-                                <img src="img/21_n.png" style="width: 3.5rem; height: 1.3rem;" alt="" />
-                            </h3>
-                            <p class="name name0">葵花籽油<br>非转基因压榨</p>
-                            <p class="specs">规格：5L</p>
-                            <p class="cost">原价：85元/桶</p>
-                            <p class="desc desc0">促销售价</p>
-                            <p class="sale sale-m">70元1桶</p>
-                        </div>
-                        <div class="product">
-                            <img src="img/21_p.png" style="width: 2.325rem; height: 5.4rem;" alt="" />
-                        </div>
-
-                    </li>
-                    <li class="p2">
-                        <div class="intro">
-                            <h3 class="brand">
-                                <img src="img/22_n.png" style="width: 1.35rem; height: 1.2rem;" alt="" />
-                            </h3>
-                            <p class="name name0">百草味&nbsp芒果</p>
-                            <p class="specs">规格：48g</p>
-                            <p class="cost">原价：8元/包</p>
-                            <p class="desc desc0">促销售价</p>
-                            <p class="sale sale-m">7元1包</p>
-                        </div>
-                        <div class="product">
-                            <img src="img/22_p.png" style="width: 2.55rem; height: 4.625rem; margin: .6rem 0 0 -0.2rem;" alt="" />
-                        </div>
-
-                    </li>
-                    <li class="p2">
-                        <div class="intro">
-                            <h3 class="brand">
-                                <img src="img/31_n.png" style="	width: 3.25rem; height: 1.675rem;" alt="" />
-                            </h3>
-                            <p class="name">全效洗衣粉</p>
-                            <p class="specs">规格：1100g</p>
-                            <p class="cost">原价：13元/袋</p>
-                            <p class="desc desc0">促销售价</p>
-                            <p class="sale sale-m">11元1袋</p>
-                        </div>
-                        <div class="product">
-                            <img src="img/31_p.png" style="width: 2.85rem; height: 4.275rem; margin: .65rem 0 0 -0.5rem;" alt="" />
-                        </div>
-
-                    </li>
-                    <li class="p2">
-                        <div class="intro">
-                            <h3 class="brand">
-                                <img src="img/32_n.png" style="width: 1.1rem; height: 1rem;" alt="" />
-                            </h3>
-                            <p class="name name0">3层绒触感<br>3连包抽纸</p>
-                            <p class="specs">规格：130抽</p>
-                            <p class="cost">原价：6.5元/包</p>
-                            <p class="desc desc0">促销售价</p>
-                            <p class="sale sale-l">15元1提<small>(3包)</small></p>
-                        </div>
-                        <div class="product">
-                            <img src="img/32_p.png" style="	width: 3.0rem; height: 4.2rem; margin: 0 0 0 -0.2rem;" alt="" />
-                        </div>
-
-                    </li>
-                    <li class="p2">
-                        <div class="intro">
-                            <h3 class="brand">
-                                <img src="img/41_n.png" style="width: 2.8rem; height: 1.1rem;" alt="" />
-                            </h3>
-                            <p class="name">洁丽雅<br>全棉面巾</p>
-                            <p class="specs">规格:74*34mm</p>
-                            <p class="cost">原价:12元/条</p>
-                            <p class="desc desc0">促销售价</p>
-                            <p class="sale sale-m">18元2条</p>
-                        </div>
-                        <div class="product">
-                            <img src="img/41_p.png" style="width: 3.625rem; height: 2.575rem; margin: 1rem 0 0 -.7rem" alt="" />
-                        </div>
-
-                    </li>
-                    <li class="p2">
-                        <div class="intro">
-                            <h3 class="brand">
-                                <img src="img/42_n.png" style="width:3.625rem; height: 0.825rem;" alt="" />
-                            </h3>
-                            <p class="name name0">超级马力晶&nbsp<br>亮玻璃水(0度)</p>
-                            <p class="specs">规格：1.8L</p>
-                            <p class="cost">原价：10元/瓶</p>
-                            <p class="desc desc0">促销售价</p>
-                            <p class="sale sale-m">15元2瓶</p>
-                        </div>
-                        <div class="product">
-                            <img src="img/42_p.png" style="width: 2.975rem; height: 3.925rem; margin: .5rem 0 0 -0.3rem;" alt="" />
-                        </div>
-
-                    </li>
-
-                </ul>
-                <ul class="p1-list">
-                    <li class="p1">
-                        <div class="product">
-                            <img src="img/p1_1.png" style="width: 6.05rem; height: 4.875rem;" alt="" />
-                        </div>
-                        <div class="intro p1-intro">
-                            <p class="name">达利园&nbsp早茶饼</p>
-                            <p class="specs">规格：150g</p>
-                            <p class="name">光明&nbspUHT&nbsp纯牛奶</p>
-                            <p class="specs">规格：250ml</p>
-                            <p class="cost">总价：6元</p>
-                            <p class="desc desc0">组合促销售价</p>
-                            <p class="sale sale-s">5元</p>
-                        </div>
-                        <div class="j"><img src="img/j1.png" alt="" /></div>
-                    </li>
-                    <li class="p1">
-                        <div class="product">
-                            <img src="img/p1_2.png" style="width: 7.25rem; height: 5.5rem;"
-                            alt="" />
-                        </div>
-                        <div class="intro p1-intro">
-                            <p class="name">奥利奥&nbsp草莓夹心饼干</p>
-                            <p class="specs">克数：130g</p>
-                            <p class="name">农夫山泉<br>水溶C100柠檬汁</p>
-                            <p class="line">
-                                <span class="specs">规格：445ml</span>
-                                <span class="cost">总价：13元</span>
-                            </p>
-                            <p class="desc desc0">组合促销售价</p>
-                            <p class="sale sale-s">10元</p>
-                        </div>
-                        <div class="j"><img src="img/j2.png" alt="" /></div>
-                    </li>
-                    <li class="p1">
-                        <div class="product">
-                            <img src="img/p1_3.png" style="	width: 6.1rem; height: 5.675rem;" alt="" />
-                        </div>
-                        <div class="intro p1-intro">
-                            <p class="name">景田百岁山&nbsp矿泉水</p>
-                            <p class="specs">规格：348ml</p>
-                            <p class="specs">规格：570ml</p>
-                            <p class="cost">总价：5.5元</p>
-                            <p class="desc desc0">组合促销售价</p>
-                            <p class="sale sale-b">购买2瓶570ml<br><small>赠送348ml1瓶</small></p>
-                        </div>
-                    </li>
-                </ul>
-            </main>
-            <footer>
-                <img src="img/bg_bottom.png" alt="" />
-            </footer>
+    <header class="clearfix">
+        <!-- <h1 class="logo fl">
+            <a href="index.html">
+                <img src="img/logo.png" alt="" />
+            </a>
+        </h1>
+        <div class="seat fl">
+            <em></em>
+            <span>浙江</span>
         </div>
+        <div class="loginbox fr">
+            <a href="login.html">登录</a>
+            |
+            <a href="register.html">注册</a>
+        </div> -->
+    </header>
+    <main class="main">
+        <div class="banner swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/banner2.jpg" alt="" /></div>
+                <div class="swiper-slide"><img src="img/banner4.jpg" alt="" /></div>
+                <div class="swiper-slide"><img src="img/banner3.jpg" alt="" /></div>
+                <div class="swiper-slide"><img src="img/banner4.jpg" alt="" /></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <ul class="icons clearfix">
+            <li class="icon fl">
+                <a href="#">
+                    <img src="img/ico1.png" alt="" />
+                    <span>生日蛋糕</span>
+                </a>
+            </li>
+            <li class="icon fl">
+                <a href="#">
+                    <img src="img/ico2.png" alt="" />
+                    <span>生日蛋糕</span>
+                </a>
+            </li>
+            <li class="icon fl">
+                <a href="#">
+                    <img src="img/ico3.png" alt="" />
+                    <span>生日蛋糕</span>
+                </a>
+            </li>
+            <li class="icon fl">
+                <a href="#">
+                    <img src="img/ico4.png" alt="" />
+                    <span>生日蛋糕</span>
+                </a>
+            </li>
+        </ul>
+        <section class="gold-area">
+            <div class="col-1 fl">
+                <a href="#"><img src="img/11.jpeg" alt="" /></a>
+            </div>
+            <div class="col-2 fl clearfix">
+                <div class="col-2-row-1 fl">
+                    <a href="#"><img src="img/12.jpg" alt="" /></a>
+                </div>
+                <div class="col-2-row-2 fl">
+                    <div class="col-2-row-2-col fl">
+                        <a href="#"><img src="img/21.jpg" alt="" /></a>
+                    </div>
+                    <div class="col-2-row-2-col fl">
+                        <a href="#"><img src="img/22.jpg" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="hot-wrapper">
+            <h3 class="hot-title">人气商品</h3>
+            <ul class="hot-content clearfix">
+                <li class="product fl">
+                    <div class="img-wrap">
+                        <img src="img/p2.jpg" alt="" />
+                    </div>
+                    <p class="title">【EXO鹿晗同款情侣鞋】韩版纯色低帮系带小白鞋帆布鞋 </p>
+                    <p class="price">￥52.50</p>
+                </li>
+                <li class="product fl">
+                    <div class="img-wrap">
+                        <img src="img/p1.jpg" alt="" />
+                    </div>
+                    <p class="title">【EXO鹿晗同款情侣鞋】韩版纯色低帮系带小白鞋帆布鞋 </p>
+                    <p class="price">￥52.50</p>
+                </li>
+                <li class="product fl">
+                    <div class="img-wrap">
+                        <img src="img/p3.jpg" alt="" />
+                    </div>
+                    <p class="title">【EXO鹿晗同款情侣鞋】韩版纯色低帮系带小白鞋帆布鞋 </p>
+                    <p class="price">￥52.50</p>
+                </li>
+                <li class="product fl">
+                    <div class="img-wrap">
+                        <img src="img/p4.jpg" alt="" />
+                    </div>
+                    <p class="title">【EXO鹿晗同款情侣鞋】韩版纯色低帮系带小白鞋帆布鞋 </p>
+                    <p class="price">￥52.50</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <div class="float-car">
+        <span>2</span>
+        <img src="img/car0.png" alt="" />
     </div>
-
+    <footer class="clearfix">
+        <!-- <a href="#" class="i_item fl active">
+            <span class="i_icon"></span>
+            <span class="i_txt">首页</span>
+        </a>
+        <a href="selectshop.html" class="i_item fl">
+            <span class="i_icon"></span>
+            <span class="i_txt">分类</span>
+        </a>
+        <a href="shopcar.html" class="i_item fl">
+            <span class="i_icon"></span>
+            <span class="i_txt">购物车</span>
+        </a>
+        <a href="#" class="i_item fl">
+            <span class="i_icon"></span>
+            <span class="i_txt">我的</span>
+        </a> -->
+    </footer>
 
 </body>
-<!-- <script type="text/javascript" src="js/zepto.min.js"></script> -->
-<!-- <script type="text/javascript" src="js/index.js"></script> -->
-<script src="js/iscroll.js" charset="utf-8"></script>
-<script type="text/javascript">
-function initScroll( sClass ){
-    myScroll = new IScroll(sClass,{
-        vScroll: true,
-        bounce: true,
-        checkDOMChanges: true,
-        resizeScrollbars: true,
-        click: true
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/header.js"></script>
+<script type="text/javascript" src="js/footer.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/swiper3.07.min.js"></script>
+<script type="text/javascript" src="dist/dropload.min.js"></script>
+
+<script>
+$(function(){
+    var mySwiper = new Swiper ('.swiper-container', {
+      loop: true,
+      pagination: '.swiper-pagination',
+      autoplay : 3000,
+     });
+    $('.i_item').click(function(){
+        var i = $(this).index();
+       $('.i_item').removeClass('active').eq(i).addClass('active');
+   });
+    $('.product').on('click',function(){
+        window.location.href = 'detail.html';
     });
-}
-initScroll('#container');
+    // dropload
+    $('.hot-wrapper').dropload({
+        scrollArea : window,
+        loadDownFn : function(me){
+            var newProduct = '<li class="product fl">'+
+                                '<div class="img-wrap">'+
+                                    '<img src="img/p3.jpg" alt="" />'+
+                                '</div>'+
+                                '<p class="title">【EXO鹿晗同款情侣鞋】韩版纯色低帮系带小白鞋帆布鞋 </p>'+
+                                '<p class="price">￥52.50</p>'+
+                            '</li>'
+            setTimeout(function(){
+                for (var i = 0; i < 2; i++) {
+                    $('.hot-content').append(newProduct);
+                }
+                // 每次数据加载完，必须重置
+                me.resetload();
+            },1000);
+        }
+    });
+})
 
 </script>
 </html>

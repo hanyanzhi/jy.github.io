@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>微商城</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    window.clientWidth = docEl.clientWidth;
+                    if (!window.clientWidth) return;
+                    docEl.style.fontSize = 20 * (window.clientWidth / 320) + 'px';
+                    window.base = 20 * (window.clientWidth / 320);
+                };
+
+        try {
+            recalc();
+        } catch (e) {
+
+        }
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+    </script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/swiper3.07.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <nav class="new-header">
+        <span class="toleft"><img src="img/toleft.png" alt="" /></span>
+        <span class="title">商品详情</span >
+    </nav>
+    <div class="product-container">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/detail2.jpg" alt="" /></div>
+                <div class="swiper-slide"><img src="img/detail1.jpg" alt="" /></div>
+                <div class="swiper-slide"><img src="img/detail3.jpg" alt="" /></div>
+                <div class="swiper-slide"><img src="img/detail4.jpg" alt="" /></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <h3 class="title">来自巴黎的心意月饼礼盒【线上专款】</h3>
+        <p class="desc">
+            甄选五种经典口味，乳酪、巧克力榛子、蔓越莓、蓝莓和提拉米苏。乳酪浓郁，果味酸爽，层层滋味带来更多美味体验，为团圆相聚留下幸福的味道。
+        </p>
+        <p class="intro">
+            ※支持全国配送（港澳台及偏远地区除外），该礼盒仅限线上售卖，任意2盒包邮。
+        </p>
+        <p class="buynum">
+            <span class="lab">购买数量：</span>
+            <span class="redu kuang">-</span>
+            <input class="num" type="number" name="num" value="1">
+            <span class="add kuang">+</span>
+        </p>
+        <p class="price">
+            <span class="lab">价格：</span>
+            <span class="money">￥90.00</span>
+        </p>
+        <p class="size">
+            <span class="lab">规格：</span>
+            <span>
+                <span class="size-num selected">Φ20cm</span>
+                <span class="size-num">Φ25cm</span>
+                <span class="size-num">Φ30cm</span>
+            </span>
+
+
+        </p>
+        <p class="btn-buy">
+            <button class="buy-now" type="button" name="button">立即购买</button>
+            <button class="buy-car" type="button">加入购物车</button>
+        </p>
+    </div>
+
+    <footer class="clearfix">
+    </footer>
+
+</body>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/footer.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/swiper3.07.min.js"></script>
+
+<script>
+$(function(){
+    var mySwiper = new Swiper ('.swiper-container', {
+      loop: true,
+      pagination: '.swiper-pagination',
+      autoplay : 3000,
+    })
+    $('.size-num').click(function(){
+        var i = $(this).index();
+       $('.size-num').removeClass('selected').eq(i).addClass('selected');
+    })
+})
+
+</script>
+</html>

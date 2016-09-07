@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>微商城</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    window.clientWidth = docEl.clientWidth;
+                    if (!window.clientWidth) return;
+                    docEl.style.fontSize = 20 * (window.clientWidth / 320) + 'px';
+                    window.base = 20 * (window.clientWidth / 320);
+                };
+
+        try {
+            recalc();
+        } catch (e) {
+
+        }
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+    </script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/swiper3.07.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header class="clearfix">
+    </header>
+    <nav class="new-header" style="margin-top:2rem;">
+        <span class="toleft"><img src="img/toleft.png" alt="" /></span>
+        <span class="title">购物车</span >
+    </nav>
+    <div class="shopcar-wrap">
+        <!-- 购物车为空 -->
+        <!-- <div class="car0">
+            <img src="img/car0.png" alt="" />
+            <p>您的购物车为空，赶快<big class="red">去购物吧</big>！</p>
+        </div> -->
+        <!-- 购物车不为空 -->
+        <div class="carfull">
+            <!-- 用户未登录 -->
+            <div class="unlogin">
+                登录后商品可永久保存
+                <a href="login.html">登录</a>
+            </div>
+            <ul>
+                <li class="shop-product clearfix">
+                    <a class="fl" href=""><img src="img/car1.jpg" alt="" /></a>
+                    <div class="right fl" style="vertical-align:middle">
+                        <span class="redu kuang">-</span>
+                        <input class="num" type="number" name="num" value="1">
+                        <span class="add kuang">+</span>
+                        <span class="del">删除</span>
+                        <span class="price">￥198.00</span>
+                    </div>
+
+                    <p class="name"> 华尔兹蛋糕 × <span>1</span> <span>Φ20cm</span></p>
+                </li>
+                <li class="shop-product clearfix">
+                    <a class="fl" href=""><img src="img/car1.jpg" alt="" /></a>
+                    <div class="right fl" style="vertical-align:middle">
+                        <span class="redu kuang">-</span>
+                        <input class="num" type="number" name="num" value="1">
+                        <span class="add kuang">+</span>
+                        <span class="del">删除</span>
+                        <span class="price">￥198.00</span>
+                    </div>
+
+                    <p class="name"> 华尔兹蛋糕 × <span>1</span> <span>Φ20cm</span></p>
+                </li>
+            </ul>
+            <p class="total-price">购物金额：<span class="red">￥199.9</span></p>
+        </div>
+
+
+        <div class="btns clearfix">
+            <a href="index.html"><div class="fl shop-continue-btn">继续购物</div></a>
+            <a href="confirmOrdered.html"><div class="fl payment-btn">去结算</div></a>
+        </div>
+
+
+    </div>
+
+</body>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/header.js"></script>
+<script type="text/javascript" src="js/index.js?v=4"></script>
+<script type="text/javascript" src="js/swiper3.07.min.js"></script>
+
+<script>
+
+</script>
+</html>

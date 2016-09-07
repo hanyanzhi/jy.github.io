@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>微商城</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    window.clientWidth = docEl.clientWidth;
+                    if (!window.clientWidth) return;
+                    docEl.style.fontSize = 20 * (window.clientWidth / 320) + 'px';
+                    window.base = 20 * (window.clientWidth / 320);
+                };
+
+        try {
+            recalc();
+        } catch (e) {
+
+        }
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+    </script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/swiper3.07.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header class="clearfix">
+
+    </header>
+    <div class="coupon-wrap">
+        <nav>
+            <span class="active">未使用</span>
+            <span>已过期</span>
+            <span>已使用</span>
+        </nav>
+        <!-- 没有优惠券 -->
+        <div class="coupon0">
+        </div>
+        <!-- 有优惠券 -->
+        <div class="coupon-continer">
+            <section class="coupon-list un-use">
+                <div class="coupon clearfix">
+                    未使用
+                    <!-- <div class="left fl">
+                        <p class="num"><i>￥</i><span>70</span><i>.00</i>(满0元可用)</p>
+                        <p class="con">使用范围：XX专营店(限部分商品)</p>
+                    </div>
+                    <div class="right fl">
+                        <span>京券</span>
+                        <div>2016.08.30<p>~</p>2016.09.03</div>
+                    </div>
+                    <div class="bottom">
+                        <div class="border"></div>
+                    </div> -->
+                </div>
+                <div class="coupon">
+
+                </div>
+                <div class="coupon">
+
+                </div>
+            </section>
+            <section class="coupon-list used" style="display:none;">
+                <div class="coupon">
+                    已过期
+                </div>
+            </section>
+            <section class="coupon-list out-date" style="display:none;">
+                <div class="coupon">
+                    已使用
+                </div>
+            </section>
+
+        </div>
+    </div>
+    <footer class="clearfix">
+    </footer>
+
+</body>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/header.js"></script>
+<script type="text/javascript" src="js/footer.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/swiper3.07.min.js"></script>
+
+<script>
+$(function(){
+    $('nav span').on('click',function(){
+        var i = $(this).index();
+        $('nav span').removeClass('active').eq(i).addClass('active');
+        $('.coupon-list').hide().eq(i).show();
+
+    })
+})
+
+</script>
+</html>

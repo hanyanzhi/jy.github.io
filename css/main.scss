@@ -1,0 +1,634 @@
+$mainColor: #a22136;
+$headerColor: #e4393c;
+.red{
+    color: $mainColor;
+}
+header{
+    width: 16rem;
+    background-color: $mainColor;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    .logo{
+        padding: 0.4rem 0.5rem 0.2rem 0.3rem;
+        height: 2rem;
+        img{
+           vertical-align: top;
+           width: 1.2rem;
+       }
+    }
+    .seat{
+        margin: 0.75rem 0 0 0.05rem;
+        font-size: 10px;
+        color: #fff;
+        position: relative;
+        top: .25rem;
+        em{
+            display: inline-block;
+            width: 0.35rem;
+            height: 0.5rem;
+            background: url("../img/seat.png") no-repeat 0 0;
+            background-size: 100% 100%;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+        span{
+            display: inline-block;
+            width: 2rem;
+            position: absolute;
+            top: 50%;
+            left: 0.5rem;
+            transform: translateY(-50%);
+
+        }
+    }
+    .loginbox{
+        display: inline-block;
+        color: #fff;
+        font-size: 12px;
+        padding: 0.65rem 0.5rem 0 0;
+    }
+    .loginedbox{
+        a:first-child{
+            width: 2.1rem;
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            vertical-align: top;
+        }
+    }
+}
+main{
+    padding-top: 2rem;
+    .banner{
+        width: 16rem;
+        height: 6.375rem;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .icons{
+        width: 100%;
+        height: 2.9rem;
+        .icon{
+            width: 25%;
+            text-align: center;
+            padding-top: .25rem;
+            img{
+                width: 1.725rem;
+                height: 1.725rem;
+            }
+            span{
+                display: block;
+                font-size: 12px;
+                color: #555;
+
+            }
+        }
+
+    }
+    .gold-area{
+        width: 100%;
+        height: 8.8rem;
+        font-size: 0;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        .col-1{
+            width: 7rem;
+            height: 100%;
+            border-right: 1px solid #e5e5e5;
+        }
+        .col-2{
+            width: 9rem;
+            height: 50%;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .col-2-row-2-col{
+            width: 4.5rem;
+            height: 50%;
+            &:first-child { border-right: 1px solid #e5e5e5; }
+        }
+
+    }
+    .hot-wrapper{
+        padding-bottom: 2rem;
+        .hot-title{
+            width: 100%;
+            height: 1.5rem;
+            line-height: 1.5rem;
+            text-align: center;
+            font-size: 14px;
+            color: #333;
+            font-weight: normal;
+        }
+        .hot-content{
+            .product{
+                width: 50%;
+                text-align: center;
+                .img-wrap{
+                    width: 97%;
+                    height: 11.2rem;
+                    margin: 0 auto;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                p{
+                    font-size: 14px;
+                    height: 1rem;
+                    line-height: 1rem;
+                    text-align: center;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    &.price{
+                        color: $mainColor;
+                    }
+                }
+            }
+        }
+    }
+}
+footer{
+    width: 100%;
+    height: 2rem;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    border-top: 1px solid #eee;
+    z-index: 100;
+    .i_item{
+        width: 25%;
+        display: block;
+        font-size: 0;
+        text-align: center;
+        padding-top: .2rem;
+        .i_icon{
+            width: .8rem;
+            height: 0.72rem;
+            display: block;
+            margin: 0 auto;
+            background: url('../img/footer.png') no-repeat;
+            background-size: 600% auto;
+        }
+        .i_txt{
+            line-height: 150%;
+            font-size: 12px;
+            color: #333;
+        }
+        &:nth-of-type(1) .i_icon{
+            background-position: 0 100%;
+        }
+        &:nth-of-type(2) .i_icon{
+            background-position: 33% 100%;
+        }
+        &:nth-of-type(3) .i_icon{
+            background-position: 68% 100%;
+        }
+        &:nth-of-type(4) .i_icon{
+            background-position: 103% 100%;
+        }
+        &.active{
+            &:nth-of-type(1) .i_icon{
+                background-position: 0 -10%;
+            }
+            &:nth-of-type(2) .i_icon{
+                background-position: 33% -10%;
+            }
+            &:nth-of-type(3) .i_icon{
+                background-position: 68% -10%;
+            }
+            &:nth-of-type(4) .i_icon{
+                background-position: 103% -10%;
+            }
+            .i_txt{
+                color: $mainColor;
+            }
+        }
+    }
+
+}
+.float-car{
+    width: 2rem;
+    height: 2rem;
+    padding: .3rem 0;
+    position: fixed;
+    bottom: 3rem;
+    left: 1rem;
+    background-color: $mainColor;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    span{
+        display: block;
+        font-size: 12px;
+    }
+    img{
+        width: .9rem;
+        height: .6rem;
+    }
+}
+.selectshop-wrapper{
+    padding-bottom: 2rem;
+    .content{
+        padding-top: 0.3rem;
+    }
+    .tab-titile{
+        width: 21%;
+        height: 23.8rem;
+        overflow: scroll;
+        border-right: 1px solid #E5E5E5;
+        position: fixed;
+        top: 2rem;
+        left: 0;
+        .nav{
+            height: 2.4rem;
+            line-height: 2.4rem;
+            text-align: center;
+            font-size: 13px;
+            color: #666;
+            border-bottom: 1px solid #E5E5E5;
+            background-color: #f8f8f8;
+            &.active{
+                background-color: white;
+                color: $mainColor;
+            }
+        }
+    }
+    .tab-box{
+        width: 77%;
+        .banner{
+            width: 100%;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .box{
+            width: 100%;
+            // height: 23.8rem;
+            // overflow: scroll;
+        }
+        .product{
+            border-bottom: 1px solid #E5E5E5;
+            position: relative;
+            .left{
+                width: 40%;
+                height: 5rem;
+                img{
+                    width: 100%;
+                }
+            }
+            .right{
+                width: 60%;
+                padding: 1rem .5rem;
+                font-size: 12px;
+                line-height: 150%;
+                .price{
+                    color: $mainColor;
+                }
+                .addtocar{
+                    width: 1rem;
+                    height: 1rem;
+                    display: inline-block;
+                    line-height: 1rem;
+                    font-size: 16px;
+                    text-align: center;
+                    background-color: $mainColor;
+                    border-radius: 100%;
+                    color: white;
+                    position: absolute;
+                    bottom: 1rem;
+                    right: 1rem;
+
+                }
+            }
+        }
+
+    }
+}
+.new-header{
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    font-weight: normal;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    background-color: $headerColor;
+    position: relative;
+    .toleft{
+        width: 2rem;
+        height: 100%;
+        line-height: 2rem;
+        padding: 0.2rem .3rem;
+        position: absolute;
+        left: 0rem;
+        top: 0rem;
+        img{
+            width: 1.1rem;
+            height: .9rem;
+        }
+    }
+    .title{
+
+    }
+}
+.product-container{
+    padding: 0 .5rem 2rem;
+    .swiper-container{
+        width: 15rem;
+        border-bottom: 2px solid #eee;
+        img{
+            width: 100%;
+        }
+    }
+    .title{
+        font-size: 14px;
+        line-height: 260%;
+    }
+    .desc{
+        font-size: 13px;
+        line-height: 150%;
+    }
+    .intro{
+        font-size: 12px;
+        line-height: 150%;
+        color: $mainColor;
+    }
+    .lab{
+        font-size: 12px;
+    }
+    // .kuang{
+    //     width: 1rem;
+    //     height: 1rem;
+    //     line-height: 1rem;
+    //     font-size: .6rem;
+    //     display: inline-block;
+    //     text-align: center;
+    //     border-radius: .1rem;
+    //     background-color: #e3e3e5;
+    //     vertical-align: middle;
+    // }
+    // .num{
+    //     border: 1px solid #ccc;
+    //     width: 2rem;
+    //     height: 1rem;
+    //     text-align: center;
+    //     vertical-align: middle;
+    // }
+    .money{
+        color: $mainColor;
+        font-size: 12px;
+    }
+    .size-num{
+        display: inline-block;
+        border: 1px solid #c8c9cd;
+        padding: 0 0.3rem;
+        text-align: center;
+        font-size: 10px;
+        line-height: 180%;
+        height: 1rem;
+        line-height: 1rem;
+        margin-right: .2rem;
+        &.selected{
+            border: #CC0000 2px solid;
+            background: url('../img/select.gif') no-repeat bottom right;
+        }
+
+    }
+    .btn-buy button{
+        width: 45%;
+        height: 1.3rem;
+        margin: .5rem 1% 1rem 2%;
+        border: none;
+        outline: none;
+        color: white;
+        font-size: 13px;
+        &.buy-now{
+            background-color: #c00;
+        }
+        &.buy-car{
+            background-color: #ff6900;
+        }
+    }
+}
+.kuang{
+    width: 1rem;
+    height: 1rem;
+    line-height: 1rem;
+    font-size: .6rem;
+    display: inline-block;
+    text-align: center;
+    border-radius: .1rem;
+    background-color: #e3e3e5;
+    vertical-align: middle;
+}
+.num{
+    border: 1px solid #ccc;
+    width: 2rem;
+    height: 1rem;
+    text-align: center;
+    vertical-align: middle;
+}
+.shopcar-wrap{
+    width: 100%;
+    .unlogin{
+        text-align: center;
+        font-size: 12px;
+        line-height: 300%;
+        a{
+            background-color: $mainColor;
+            padding: .2rem .5rem;
+            border-radius: .2rem;
+
+        }
+    }
+    .car0{
+        padding-top: 2.5rem;
+        text-align: center;
+        font-size: 16px;
+        p{
+            line-height: 300%;
+        }
+    }
+    .total-price {
+        width: 95%;
+        height: 2rem;
+        margin: 1rem auto;
+        font-size: 14px;
+        text-indent: .5rem;
+        line-height: 2rem;
+        background-color: #f0ead4;
+    }
+    .shop-product{
+        width: 95%;
+        margin: 0 auto;
+        font-size: 12px;
+        padding: .5rem 0;
+        border-bottom: 1px solid #e0e0e0;
+        background-color: #f0f2f5;
+        a{
+            display: inline-block;
+            border: 1px solid #ccc;
+            background-color: white;
+            img{
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+        }
+        .right{
+            padding: .75rem .6rem;
+            .del{
+                padding-left: .8rem;
+            }
+            .price{
+                color: red;
+                padding-left: 2rem;
+            }
+        }
+        p{
+            line-height: 180%;
+            text-indent: .4rem;
+            clear: both;
+            span:nth-of-type(2){
+                color: red;
+            }
+        }
+
+
+
+    }
+    .btns{
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        div{
+            width: 50%;
+            height: 2rem;
+            font-size: 16px;
+            color: white;
+            line-height: 2rem;
+            text-align: center;
+            &.shop-continue-btn{
+                background-color: #333;
+            }
+            &.payment-btn{
+                background-color: $mainColor;
+            }
+        }
+    }
+
+
+}
+.creat-address{
+    font-size: 14px;
+    color: #666;
+    p{
+        width: 100%;
+        padding: .5rem 0;
+        line-height: 130%;
+        border-bottom: 1px solid #ccc;
+        position: relative;
+        &.default-txt{
+            font-size: 10px;
+            padding-left: .6rem;
+        }
+        span{
+            width: 30%;
+            display: inline-block;
+            text-align: right;
+        }
+        span:before{
+            content: "*";
+            display: inline-block;
+            vertical-align: -22%;
+            padding-right: .05rem;
+        }
+        input,select{
+            color: #666;
+            font-size: 14px;
+        }
+        .address-default{
+            width: 2rem;
+            height: 1.15rem;
+            display: inline-block;
+            background: url('../img/default.png') no-repeat;
+            background-size: 100% 100%;
+            position: absolute;
+            top: .3rem;
+            right: .8rem;
+        }
+        .address-default2{
+            background: url('../img/default2.png') no-repeat;
+            background-size: 100% 100%;
+        }
+        .save-btn{
+            width: 98%;
+            height: 1.8rem;
+            line-height: 1.8rem;
+            font-size: 14px;
+            text-align: center;
+            display: block;
+            background-color: $mainColor;
+            margin: 0 auto;
+        }
+    }
+}
+.coupon-wrap{
+    nav{
+        margin-top: 2rem;
+        text-align: center;
+        font-size: 0;
+        border-bottom: 1px solid #eee;
+        span{
+            width: 20%;
+            display: inline-block;
+            font-size: 14px;
+            line-height: 200%;
+            color: #a5a5a5;
+            margin: 0 5%;
+            &.active{
+                color: $mainColor;
+                border-bottom: 1px solid $mainColor;
+            }
+        }
+    }
+    .coupon{
+        border: 1px solid #eee;
+        width: 95%;
+        height: 3.5rem;
+        margin: .5rem auto;
+        font-size: 12px;
+        // .left{
+        //     width: 70%;
+        //     .num{
+        //         line-height: 250%;
+        //         span{
+        //             font-size: 35px;
+        //         }
+        //         i{
+        //             font-style: normal;
+        //         }
+        //     }
+        //     .con{
+        //
+        //     }
+        // }
+        // .right{
+        //     width: 30%;
+        //     font-size: 12px;
+        //     text-align: center;
+        // }
+    }
+}

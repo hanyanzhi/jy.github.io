@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>在线客服</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+			resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			recalc = function () {
+				window.clientWidth = docEl.clientWidth;
+				if (!window.clientWidth) return;
+				docEl.style.fontSize = 20 * (window.clientWidth / 320) + 'px';
+				window.base = 20 * (window.clientWidth / 320);
+			};
+        try {
+            recalc();
+        } catch (e) {
+            console.log(e);
+        }
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+    </script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo"></div>
+        <div class="location"><span class="location-icon"></span><span class="location-city">北京</span></div>
+        <p><a href="#">1360000....</a> | <a href="register.html">注册</a></p>
+    </header>
+    <div class="singel-mesg">
+		<div class="info">
+			<p>首次完善以下个人信息，即可获赠官网会员20积分。信息保存后不可修改，请准确填写，我们将会在您的生日时送上真挚的祝福。</p>
+		</div>
+		<div class="form1">
+			<form action="#" method="post">
+				<ul>
+					<li><label for="my-name">姓名：</label><input type="text" name="my-name" required></li>
+					<li><label for="my-sex">性别：</label>&nbsp;&nbsp;男：<input type="radio" name="my-sex"> &nbsp;&nbsp;&nbsp;女：<input type="radio" name="my-sex"></li>
+					<li><label for="my-phone">手机：</label><input type="tel" name="my-phone" required></li>
+					<li><label for="my-mail">邮箱：</label><input type="email" name="my-mail" required></li>
+					<li><label for="my-berthday">生日：</label><input type="number" name="my-berthday" placeholder="格式：年-月-日"></li>
+					<li><label for="my-qq">QQ：</label><input type="number" min="1" name="my-qq"></li>
+					<li><label for="my-location">城市：</label><input type="address" name="my-location"></li>
+					<li class="save"><input type="submit" value="保存"></li>
+				</ul>
+			</form>
+		</div>
+    </div>
+    <footer>
+        <div class="f-section"><a href="#">联系我们</a>&nbsp;&nbsp;&nbsp;<a href="#">企业服务</a></div>
+        <div class="f-section">
+            <p>Copyright © 2016--  北京红拾科技油站便利店 版权所有</p>
+        </div>
+    </footer>
+</body>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
+<script type="text/javascript">
+
+</script>
+</html>

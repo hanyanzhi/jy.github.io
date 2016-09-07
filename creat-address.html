@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>新建收获地址</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    window.clientWidth = docEl.clientWidth;
+                    if (!window.clientWidth) return;
+                    docEl.style.fontSize = 20 * (window.clientWidth / 320) + 'px';
+                    window.base = 20 * (window.clientWidth / 320);
+                };
+
+        try {
+            recalc();
+        } catch (e) {
+
+        }
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+    </script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/swiper3.07.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header class="clearfix">
+    </header>
+    <nav class="new-header" style="margin-top:2rem;">
+        <span class="toleft"><img src="img/toleft.png" alt="" /></span>
+        <span class="title">新建收获地址</span >
+    </nav>
+    <form class="creat-address">
+        <p>
+            <span>收货人：</span>
+            <input type="text" name="name" value="韩艳智">
+        </p>
+        <p>
+            <span>手机号码：</span>
+            <input type="text" name="name" value="18811488358">
+        </p>
+        <p>
+            <span>省份：</span>
+            <select class="" name="province">
+                <option value="0">请选择省份</option>
+            </select>
+        </p>
+        <p>
+            <span>市：</span>
+            <select class="" name="city">
+                <option value="">请选择城市</option>
+            </select>
+        <p>
+            <span>区/县：</span>
+            <select class="" name="area">
+                <option value="">请选择区</option>
+            </select>
+        </p>
+        <p>
+            <span>详细地址：</span>
+            <input type="text" name="name" value="请填写详细地址">
+        </p>
+        <p class="default-txt">设置为默认地址（每次购买会使用该地址）<em class="address-default"></em></p>
+        <p><a class="save-btn" href="#">保存</a></p>
+
+    </form>
+    <footer class="clearfix">
+    </footer>
+
+</body>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/header.js"></script>
+<script type="text/javascript" src="js/footer.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/swiper3.07.min.js"></script>
+
+<script>
+$(function(){
+    $('.address-default').on('touchstart',function(){
+        $(this).toggleClass('address-default2');
+
+    })
+})
+
+</script>
+</html>

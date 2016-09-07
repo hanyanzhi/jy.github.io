@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>企业服务</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+			resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			recalc = function () {
+				window.clientWidth = docEl.clientWidth;
+				if (!window.clientWidth) return;
+				docEl.style.fontSize = 20 * (window.clientWidth / 320) + 'px';
+				window.base = 20 * (window.clientWidth / 320);
+			};
+        try {
+            recalc();
+        } catch (e) {
+            console.log(e);
+        }
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+    </script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo"></div>
+        <div class="location"><span class="location-icon"></span><span class="location-city">北京</span></div>
+        <p><a href="#">1360000....</a> | <a href="register.html">注册</a></p>
+    </header>
+    <div class="title">
+        <div class="new-header">
+            <a href="#" class="back"><</a>
+            <h1 class="user-login">企业服务</h1>
+            <a href="#" class="nav-menu">#</a>
+        </div>
+        <div class="new-nav-tab" style="display:none;">
+            <div class="tab-list">
+                <a href="#"><span class="nav-tab-icon"></span><p class="nav-tab-p">首页</p></a>
+                <a href="#"><span class="nav-tab-icon"></span><p class="nav-tab-p">分类搜索</p></a>
+                <a href="#"><span class="nav-tab-icon"></span><p class="nav-tab-p">购物车</p></a>
+                <a href="#"><span class="nav-tab-icon"></span><p class="nav-tab-p">会员中心</p></a>
+            </div>
+        </div>
+    </div>
+    <div class="forCompany">
+		<div class="info">
+			<p>北京红拾科技有限公司是一家专注于提供智慧加油站完整解决方案及加油站系统软硬件开发的互联网科技公司，公司注册资金1360万。红拾科技以“电子券系统、综合营销支付系统和多渠道线下充值系统”为三大核心产品，其他产品包括：油企微信公众号、微商城、客户数据管理平台等，形成了一整套针对加油站综合营销的解决方案。</p>
+		</div>
+		<div class="form1">
+			<form action="#" method="post">
+				<ul>
+					<li><label for="c-name">公司名称：</label><input type="text" name="c-name" required></li>
+					<li><label for="c-address">选择地址：</label><input type="tel" name="c-address" placeholder="格式：省-市-区/县" required></li>
+					<li><label for="c-add">详细地址：</label><input type="email" name="c-add" placeholder="格式：具体街道" required></li>
+					<li><label for="c-P-number">公司人数：</label><input type="number" name="c-P-number"></li>
+					<li><label for="c-contacts">联系人：</label><input type="text" name="c-contacts" required></li>
+					<li><label for="c-phone">电话：</label><input type="number" name="c-phone" required></li>
+					<li><label for="c-email">邮箱：</label><input type="email" name="c-email" required></li>
+					<li class="question"><label for="question">咨询内容：</label><textarea name="question" id="" 	resize="false">你喜欢我吗？喜欢</textarea></li>
+					<li class="submit"><input type="submit" value="提交"></li>
+				</ul>
+			</form>
+		</div>
+    </div>
+</body>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
+<script type="text/javascript">
+    $(function(){
+        $('.nav-menu').on('click',function(){
+            $('.new-nav-tab').toggle();
+        });
+    });
+</script>
+</html>
